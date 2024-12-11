@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoration Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Home</a>
+    </header>
+    <main>
+        <div class="details">
+            <img id="detail-image" src="" alt="Decoration">
+            <h2 id="detail-title"></h2>
+            <p id="detail-description"></p>
+            <div id="additional-links"></div>
+        </div>
+    </main>
+
+</div>
+<script>
+        // Populate details dynamically
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title');
+        const imageSrc = params.get('image');
+
+        // Custom descriptions for items
+        const descriptions = {
+            
+            
+            
+                                    "Kozhipannai Chelladurai": "Kozhipannai Chelladurai (2024) ORG. Dual Audio [Hindi – Telugu] Full Movie 480p [425MB] | 720p [650mb] | 1080p [2GB] :-",
+            
+            
+            
+            
+                        "Fast x": "Fast X (2023) Hindi ORG Dubbed + English 480p, 720p, 1080p",
+            
+            
+            "King of kotha": "King of Kotha [ IN HINDI ]  2023 Full Movie Download Free HD",
+            "Lucky baskhar": "Download Lucky Baskhar (2024)  [Hindi DD5.1 – Telugu DD5.1] Full Movie 480p [500MB] | 720p [1.3GB] | 1080p [3GB] –",
+            "Agni": "Agni 2024 Full Movie Download Free HD",
+            "Super 30": "Super 30 Full Movie In Hindi 👇👇 : ",
+            
+
+        };
+
+        // Links for items
+        const links = {
+            
+            
+            
+            
+                                  "Kozhipannai Chelladurai": [
+                { text: "480p(425mb)", url: "https://vmlinks.fun/genxfm784776392930/" },
+                { text: "720p(650mb)", url: "https://vmlinks.fun/genxfm784776392931/" },
+                { text: "1080p(2gb)", url: "https://vmlinks.fun/genxfm784776392933/" }
+            ],  
+            
+            
+            
+            
+            
+                      "Fast x": [
+                { text: "480p(470mb)", url: "https://vmlinks.fun/genxfm784776320379/" },
+                { text: "720p(850mb)", url: "https://vmlinks.fun/genxfm784776308034/" },
+                { text: "1080p(3.6gb)", url: "https://vmlinks.fun/genxfm784776320387/" }
+            ],  
+            
+            
+            
+            
+            
+            
+            "King of kotha": [
+                { text: "480p(450mb)", url: "https://vmlinks.fun/genxfm784776333434/" },
+                { text: "720p(1.2gb)", url: "https://vmlinks.fun/genxfm784776333444/" },
+                { text: "1080p(2.2gb)", url: "https://vmlinks.fun/genxfm784776333441/" }
+            ],
+            "Lucky baskhar": [
+                { text: "480p(500mb)", url: "https://vmlinks.fun/genxfm784776396029/" },
+                { text: "720p(820mb)", url: "https://vmlinks.fun/genxfm784776396030/" },
+                { text: "1080p(3gb)", url: "https://vmlinks.fun/genxfm784776396032/" }
+            ],
+            "Agni": [
+                { text: "480p(430mb)", url: "https://vmlinks.fun/genxfm784776397150/" },
+                { text: "720p(910mb)", url: "https://vmlinks.fun/genxfm784776397151/" },
+                { text: "1080p(2.1gb)", url: "https://vmlinks.fun/genxfm784776397152/" }
+            ],
+            "Super 30": [
+                { text: "480p(400mb)", url: "https://vmlinks.fun/genxfm7847766679/" },
+                { text: "720p(1.3gb)", url: "https://vmlinks.fun/genxfm7847766681/" },
+                { text: "1080p(1.6gb)", url: "https://vmlinks.fun/genxfm784776317316/" }
+            ],
+
+        };
+
+        // Set content dynamically
+        const description = descriptions[title] || `Details about "${title}". This is a sample description for ${title}.`;
+        document.getElementById('detail-title').textContent = title;
+        document.getElementById('detail-image').src = imageSrc;
+        document.getElementById('detail-description').textContent = description;
+
+        // Generate links dynamically
+        const linkContainer = document.getElementById('additional-links');
+        if (links[title]) {
+            links[title].forEach(link => {
+                const anchor = document.createElement('a');
+                anchor.href = link.url;
+                anchor.textContent = link.text;
+                anchor.style.display = "block"; // Makes each link appear on a new line
+                anchor.target = "_blank"; // Opens the link in a new tab
+                linkContainer.appendChild(anchor);
+            });
+        }
+    </script>
+    <style>
+        #additional-links a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0.5em 0;
+            display: inline-block;
+        }
+        #additional-links a:hover {
+            text-decoration: underline;
+        }
+        
+        header a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        body {
+            
+            background-color: #000000;
+            color: #fff;
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </style>
+</body>
+</html>
